@@ -1,0 +1,111 @@
+🔴 IMMEDIATE EXECUTION ORDER – PRODUCTION HARDENING (20-YEAR READINESS)
+
+You are instructed to BEGIN IMMEDIATELY fixing all CRITICAL BLOCKERS
+identified in the 20-year architectural audit.
+
+⚠️ This is NOT an analysis task.
+⚠️ This is NOT a proposal.
+⚠️ This is an EXECUTION-ONLY mandate.
+
+────────────────────────────────────────
+PRIMARY OBJECTIVE (NON-NEGOTIABLE)
+────────────────────────────────────────
+Transform this platform into a production-grade system capable of operating
+for 20 YEARS with:
+
+- No data loss
+- No manual recovery
+- No emergency fixes
+- No human intervention for normal failures
+- Safe redeployments and updates
+
+Any solution that does not meet this objective is INVALID.
+
+────────────────────────────────────────
+PHASE 1 – CRITICAL BLOCKERS (EXECUTE FIRST)
+────────────────────────────────────────
+
+1️⃣ AUTOMATED BACKUP & RESTORE (MANDATORY)
+- Implement automated PostgreSQL backups:
+  - Daily full backups
+  - Retention policy
+- Implement verified restore capability.
+- Backups MUST run without manual action.
+- Data loss under any failure scenario is UNACCEPTABLE.
+
+2️⃣ HEALTH CHECKS & SELF-HEALING SIGNALS
+- Implement:
+  - /api/health
+  - /api/health/ready
+- Health checks must verify:
+  - Database connectivity
+  - External services availability
+- Platform must expose its health clearly for automation.
+
+3️⃣ STRIPE SCHEMA & MIGRATION FIX
+- Fix missing Stripe-related tables and migrations.
+- Ensure:
+  - Idempotent migrations
+  - No destructive schema changes
+- Subscription and billing data MUST persist across deployments.
+
+4️⃣ SOFT DELETE – NO HARD DATA DELETION
+- Replace ALL hard deletes (e.g. deleteUser) with soft-delete.
+- No user, project, or report data may be permanently removed by default.
+- This is required for long-term survivability.
+
+5️⃣ JOB QUEUE FOR LONG-RUNNING TASKS
+- Remove long AI operations from request handlers.
+- Implement a job queue (Bull / BullMQ or equivalent).
+- Ensure:
+  - Retry logic
+  - Failure isolation
+  - No request blocking
+
+────────────────────────────────────────
+PHASE 2 – STABILITY & LONG-TERM SAFETY
+────────────────────────────────────────
+
+6️⃣ CIRCUIT BREAKERS & FAILURE ISOLATION
+- Implement circuit breakers for external services (AI, payments).
+- A failure in any external provider MUST NOT crash or stall the platform.
+
+7️⃣ CONFIGURATION-DRIVEN BEHAVIOR
+- Remove hardcoded operational behavior.
+- Enforce:
+  - DB-driven configuration
+  - Feature flags where applicable
+- Changes must NOT require redeployment.
+
+8️⃣ BASIC OBSERVABILITY
+- Add:
+  - Structured logging (JSON)
+  - Basic metrics exposure
+- Manual debugging MUST NOT be required in production.
+
+────────────────────────────────────────
+PHASE 3 – VERIFICATION (REQUIRED)
+────────────────────────────────────────
+After completing the above, provide:
+
+1. Confirmation that:
+   - Data loss is no longer possible
+   - Backups are automated and restorable
+   - Long tasks are isolated from requests
+   - Redeployments are SAFE
+
+2. A concise report listing:
+   - Each fix applied
+   - The risk it eliminated
+   - Why it is required for 20-year operation
+
+────────────────────────────────────────
+EXECUTION RULES
+────────────────────────────────────────
+- No postponement
+- No partial fixes
+- No future assumptions
+- No manual steps after deployment
+
+This execution is BLOCKING for public release.
+Begin implementation immediately.

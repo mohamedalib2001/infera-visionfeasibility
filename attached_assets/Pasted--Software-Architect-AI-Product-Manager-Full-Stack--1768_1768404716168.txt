@@ -1,0 +1,181 @@
+أنت فريق هندسي واستشاري وتنفيذي مكوّن من:
+- Software Architect
+- AI Product Manager
+- Full-Stack SaaS Engineer
+- UX/UI Expert
+- Financial & Feasibility Consultant
+- Cybersecurity & Compliance Expert
+- Growth & Monetization Strategist
+
+مهمتك:
+تصميم وبناء منصة رقمية ذكية SaaS باسم:
+
+INFERA Vision Feasibility™
+www.inferavisionfeasibility.com
+
+وصف المنصة:
+منصة احترافية تعتمد على الذكاء الاصطناعي لإنشاء دراسات جدوى استثمارية شاملة، دقيقة، وقابلة للتخصيص، تشمل التحليل المالي، التشغيلي، السوقي، والمخاطر، مع توصيات ذكية وديناميكية لصنّاع القرار.
+
+────────────────────────────
+1️⃣ الرؤية والهدف
+────────────────────────────
+- تمكين رواد الأعمال والمستثمرين والشركات من إنشاء دراسات جدوى احترافية خلال دقائق
+- تقليل المخاطر الاستثمارية عبر تحليل تنبؤي ذكي
+- تحويل الأفكار إلى قرارات قائمة على البيانات
+- دعم السوق العربي والعالمي (Multilingual)
+
+────────────────────────────
+2️⃣ الميزات الأساسية (Core Features)
+────────────────────────────
+- مولد دراسات جدوى ذكي بالذكاء الاصطناعي
+- تحليل مالي شامل:
+  - CAPEX / OPEX
+  - Cash Flow
+  - IRR / NPV / ROI
+  - Sensitivity Analysis
+- تحليل سوق تلقائي (Market Size, TAM, SAM, SOM)
+- تحليل مخاطر ذكي (تشغيلي – مالي – قانوني – تقني)
+- توصيات استثمارية ديناميكية
+- ذكاء بصري (Charts, Graphs, Dashboards)
+- تصدير احترافي (PDF, Word, Excel, PowerPoint)
+- حفظ الإصدارات Versioning
+- مقارنة سيناريوهات متعددة
+
+────────────────────────────
+3️⃣ الذكاء الاصطناعي (AI Engine)
+────────────────────────────
+- استخدام LLMs (GPT-4.1 أو ما يعادله)
+- Prompt Chaining + Agents
+- Financial Reasoning Models
+- Predictive Analytics
+- Industry-aware Context (حسب القطاع)
+- تعلم تفضيلات المستخدم (Adaptive AI)
+- ذكاء بصري لتحليل البيانات
+
+────────────────────────────
+4️⃣ نظام المستخدمين والصلاحيات
+────────────────────────────
+- تسجيل / تسجيل دخول (Email – OAuth – SSO)
+- أدوار وصلاحيات:
+  - Admin
+  - Analyst
+  - Investor
+  - Client
+- إدارة فرق عمل
+- Multi-tenant Architecture
+- سجل نشاط Audit Log
+
+────────────────────────────
+5️⃣ الاشتراكات والتسعير
+────────────────────────────
+- Free Trial
+- Basic
+- Pro
+- Enterprise
+- Limitations حسب الخطة:
+  - عدد الدراسات
+  - مستوى الذكاء
+  - التصدير
+  - التعاون
+- كوبونات وخصومات
+- Billing تلقائي
+
+────────────────────────────
+6️⃣ بوابات الدفع (Payments)
+────────────────────────────
+- Stripe
+- PayPal
+- Apple Pay / Google Pay
+- دعم العملات المتعددة
+- فواتير تلقائية
+- اشتراكات شهرية وسنوية
+
+────────────────────────────
+7️⃣ Landing Page ذكية احترافية
+────────────────────────────
+- Copywriting مدفوع بالذكاء الاصطناعي
+- Personalization حسب الزائر
+- CTA ديناميكي
+- Demo تفاعلي
+- SEO Optimized
+- سرعة عالية + Lighthouse 95+
+
+────────────────────────────
+8️⃣ الواجهة وتجربة المستخدم (UX/UI)
+────────────────────────────
+- Dashboard احترافي
+- Design حديث (FinTech / AI Style)
+- Dark & Light Mode
+- Responsive (Web + Tablet + Mobile)
+- تجربة مستخدم عربية/إنجليزية ممتازة
+
+────────────────────────────
+9️⃣ التقنيات المقترحة (Tech Stack)
+────────────────────────────
+Frontend:
+- Next.js / React
+- TailwindCSS
+- Framer Motion
+
+Backend:
+- Node.js / NestJS
+- Python (AI Services)
+- REST + GraphQL
+
+Database:
+- PostgreSQL
+- Redis
+- Vector DB (Pinecone / Weaviate)
+
+AI:
+- OpenAI API
+- LangChain
+- RAG
+- Financial Models
+
+Infra:
+- Docker
+- Kubernetes
+- AWS / Vercel
+- CI/CD
+
+────────────────────────────
+🔟 الأمان والامتثال
+────────────────────────────
+- JWT + OAuth2
+- Encryption at Rest & Transit
+- GDPR / ISO27001 Ready
+- Secure Payments
+- Rate Limiting
+
+────────────────────────────
+1️⃣1️⃣ التحليلات والتقارير
+────────────────────────────
+- User Analytics
+- Revenue Tracking
+- AI Usage Metrics
+- Conversion Funnels
+
+────────────────────────────
+1️⃣2️⃣ التوسع والنمو
+────────────────────────────
+- API للمطورين
+- White-Label
+- Marketplace مستقبلي
+- Integrations (CRM – ERP)
+
+────────────────────────────
+1️⃣3️⃣ المطلوب منك الآن
+────────────────────────────
+- تقديم:
+  1. System Architecture Diagram (وصف تفصيلي)
+  2. Database Schema
+  3. User Flow
+  4. AI Prompt Architecture
+  5. Subscription Logic
+  6. Landing Page Structure
+  7. Roadmap تنفيذ MVP → Scale
+  8. Best Practices
+
+كن دقيقًا، احترافيًا، وتصرّف كأنك تبني شركة Unicorn حقيقية.
+لا تكتب عموميات، قدّم حلول قابلة للتنفيذ.

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+
+  --primary: 190 100% 50%;
+  --primary-foreground: 240 5.9% 10%;
+
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+
+  --accent: 260 100% 60%;
+  --accent-foreground: 0 0% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 190 100% 50%;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.bg-grid-pattern {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* ========================================
+   RTL (Right-to-Left) Arabic Support
+   Targeted approach using CSS logical properties
+   ======================================== */
+
+/* Root RTL settings */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Segoe UI', 'Arial', 'Tahoma', 'Inter', sans-serif;
+}
+
+/* LTR mode explicit text alignment */
+html[dir="ltr"] body,
+html:not([dir="rtl"]) body {
+  text-align: left;
+}
+
+/* RTL-specific utility classes */
+.rtl-text-right {
+  text-align: right;
+}
+
+.rtl-text-left {
+  text-align: left;
+}
+
+/* RTL flex reverse - use this class explicitly on containers that need reversal */
+html[dir="rtl"] .rtl-flex-reverse {
+  flex-direction: row-reverse;
+}
+
+/* RTL Input fields */
+html[dir="rtl"] input:not([type="number"]),
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+  text-align: right;
+}
+
+/* Numbers stay LTR in RTL context (Unicode Bidi Isolation) */
+html[dir="rtl"] input[type="number"],
+html[dir="rtl"] .currency-value,
+html[dir="rtl"] [data-type="number"] {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+}
+
+/* RTL Tables */
+html[dir="rtl"] table {
+  direction: rtl;
+}
+
+html[dir="rtl"] th,
+html[dir="rtl"] td {
+  text-align: right;
+}
+
+/* RTL Lists */
+html[dir="rtl"] ul:not(.no-rtl),
+html[dir="rtl"] ol:not(.no-rtl) {
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 0;
+}
+
+/* RTL Prose content */
+html[dir="rtl"] .prose {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .prose h1,
+html[dir="rtl"] .prose h2,
+html[dir="rtl"] .prose h3,
+html[dir="rtl"] .prose h4,
+html[dir="rtl"] .prose p,
+html[dir="rtl"] .prose li {
+  text-align: right;
+}
+
+/* RTL Whitespace pre-wrap content */
+html[dir="rtl"] .whitespace-pre-wrap {
+  text-align: right;
+  direction: rtl;
+}
+
+/* RTL Card content alignment */
+html[dir="rtl"] [data-rtl-content="true"] {
+  text-align: right;
+}
+
+/* RTL space-x handling - set the reverse variable */
+html[dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]),
+html[dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]),
+html[dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]),
+html[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* RTL border utilities using logical properties */
+html[dir="rtl"] .border-l-primary {
+  border-left-color: transparent;
+  border-right-color: hsl(var(--primary));
+  border-left-width: 0;
+  border-right-width: 4px;
+}
+
+/* Explicit RTL margin/padding swap utilities */
+html[dir="rtl"] .rtl-ml-auto {
+  margin-inline-start: auto;
+  margin-inline-end: 0;
+}
+
+html[dir="rtl"] .rtl-mr-auto {
+  margin-inline-end: auto;
+  margin-inline-start: 0;
+}
+
+/* RTL justify-between keeps items spaced correctly */
+html[dir="rtl"] .justify-between {
+  justify-content: space-between;
+}
+
+/* Prevent specific elements from being affected by RTL */
+.no-rtl {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Keep center alignment in RTL */
+html[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+
+/* Keep left alignment when explicitly set */
+html[dir="rtl"] .text-left {
+  text-align: left !important;
+}
+
+/* RTL Sidebar positioning */
+html[dir="rtl"] [data-side="right"] {
+  right: 0;
+  left: auto;
+}
+
+/* RTL icon spacing fix */
+html[dir="rtl"] .gap-1,
+html[dir="rtl"] .gap-2 {
+  direction: inherit;
+}
+
+/* RTL text alignment - use text-align: start for proper RTL/LTR behavior */
+html[dir="rtl"] .rtl-align {
+  text-align: right;
+}
+
+/* RTL Label alignment */
+html[dir="rtl"] label {
+  text-align: start;
+}
+
+/* RTL form groups */
+html[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+/* Note: Avoid blanket margin/padding overrides to prevent layout breakage.
+   Use logical properties (ms-*, me-*, ps-*, pe-*) in component classes where needed. */
+
+/* Explicit RTL start/end margin/padding classes */
+.ms-auto { margin-inline-start: auto; }
+.me-auto { margin-inline-end: auto; }
+.ps-1 { padding-inline-start: 0.25rem; }
+.ps-2 { padding-inline-start: 0.5rem; }
+.ps-3 { padding-inline-start: 0.75rem; }
+.ps-4 { padding-inline-start: 1rem; }
+.pe-1 { padding-inline-end: 0.25rem; }
+.pe-2 { padding-inline-end: 0.5rem; }
+.pe-3 { padding-inline-end: 0.75rem; }
+.pe-4 { padding-inline-end: 1rem; }
+.ms-1 { margin-inline-start: 0.25rem; }
+.ms-2 { margin-inline-start: 0.5rem; }
+.ms-3 { margin-inline-start: 0.75rem; }
+.ms-4 { margin-inline-start: 1rem; }
+.me-1 { margin-inline-end: 0.25rem; }
+.me-2 { margin-inline-end: 0.5rem; }
+.me-3 { margin-inline-end: 0.75rem; }
+.me-4 { margin-inline-end: 1rem; }
+
+/* RTL toast positioning */
+html[dir="rtl"] [data-state="open"][data-swipe-direction] {
+  right: 0;
+  left: auto;
+}

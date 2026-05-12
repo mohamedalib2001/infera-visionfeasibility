@@ -1,0 +1,153 @@
+🔴 UNIVERSAL CRITICAL PLATFORM AUDIT REQUEST
+(20-YEAR SURVIVABILITY & ZERO-DATA-LOSS GUARANTEE)
+
+You are required to perform a FULL, DEEP, NON-SUPERFICIAL TECHNICAL,
+ARCHITECTURAL, AND OPERATIONAL AUDIT of this platform.
+
+⚠️ This is NOT an MVP review.
+⚠️ This is NOT a demo evaluation.
+⚠️ This audit is for a REAL production platform expected to operate
+for 20 YEARS with minimal or zero human intervention.
+
+────────────────────────────────────────
+1️⃣ LONG-TERM VIABILITY (20 YEARS) – MANDATORY
+────────────────────────────────────────
+You MUST determine with absolute honesty whether the platform can:
+
+- Operate continuously for 20 years
+- WITHOUT:
+  - manual code maintenance
+  - developer intervention
+  - emergency fixes
+  - system resets
+- WITH:
+  - self-healing behavior
+  - forward compatibility
+  - automatic recovery
+  - no architectural rewrites
+
+If ANY component cannot realistically survive 20 years,
+you MUST explicitly flag it.
+
+────────────────────────────────────────
+2️⃣ ZERO DATA LOSS – CRITICAL REQUIREMENT
+────────────────────────────────────────
+The platform MUST guarantee that NO deployment, update, or restart can EVER cause loss of:
+
+- Owner / root account
+- Admin access
+- Users and subscribers
+- Subscriptions and entitlements
+- Configuration and policies
+- Feature flags
+- Billing or payment state
+- Audit logs
+
+You MUST audit:
+- Database lifecycle during deployments
+- Migration safety (idempotent, non-destructive)
+- Seeding logic (must NEVER overwrite production data)
+- Owner bootstrap logic (must be immutable)
+- Backup & restore mechanisms
+- Whether ANY update path can reset or wipe data
+
+⚠️ If data loss is possible under ANY scenario, this is a RELEASE BLOCKER.
+
+────────────────────────────────────────
+3️⃣ SCALABILITY WITHOUT CODE CHANGES
+────────────────────────────────────────
+You MUST verify whether the platform can:
+
+- Scale horizontally
+- Add integrations, providers, features
+- Change behavior and rules
+
+WITHOUT:
+- modifying application code
+- redeploying logic
+- touching core services
+
+The platform must be:
+- configuration-driven
+- policy-based
+- feature-flag controlled
+
+If scaling requires code edits, this MUST be reported as a critical flaw.
+
+────────────────────────────────────────
+4️⃣ STATELESS & SELF-HEALING ARCHITECTURE
+────────────────────────────────────────
+You MUST confirm:
+
+- NO critical state exists in memory
+- ALL state is persisted in durable storage
+- The platform can restart, crash, or redeploy
+  WITHOUT losing:
+  - sessions
+  - auth state
+  - locks
+  - limits
+  - subscriptions
+  - configuration
+
+Self-healing, retries, circuit breakers, and recovery MUST be evaluated.
+
+────────────────────────────────────────
+5️⃣ OBSERVABILITY & RELIABILITY
+────────────────────────────────────────
+Audit the presence and quality of:
+- Structured logging (JSON)
+- Metrics collection
+- Health checks
+- Failure detection
+- Automatic recovery
+- External dependency isolation
+
+Manual monitoring or manual fixes MUST be flagged as risks.
+
+────────────────────────────────────────
+6️⃣ DYNAMIC CONFIGURATION & THEMING
+────────────────────────────────────────
+Verify that:
+- Platform behavior is dynamically configurable
+- UI / Landing / Themes are data-driven
+- Multiple themes are supported
+- One default theme is enforced
+- Future changes do NOT require redeployment
+- UI changes cannot destabilize the system
+
+────────────────────────────────────────
+7️⃣ CENTRAL PLATFORM / CORE SYSTEM CLAIM
+────────────────────────────────────────
+You MUST answer clearly:
+
+Is this platform TRULY a long-lived, extensible, resilient core system
+(or central platform), or is it a monolithic application?
+
+If NOT, explain:
+- Why
+- What is missing
+- What prevents long-term survivability
+
+────────────────────────────────────────
+8️⃣ FINAL DELIVERABLE – REQUIRED
+────────────────────────────────────────
+Return a STRUCTURED AUDIT REPORT including:
+
+- ✅ What is safe and future-proof
+- ⚠️ What is risky long-term
+- 🔴 What MUST be fixed immediately
+- 🟡 What can be delayed
+- ❌ What makes 20-year operation impossible (if any)
+
+And provide ONE FINAL VERDICT ONLY:
+- ✅ READY FOR 20-YEAR PRODUCTION
+- ⚠️ REQUIRES SPECIFIC FIXES (LIST THEM)
+- ❌ NOT VIABLE FOR LONG-TERM OPERATION
+
+⚠️ Do NOT soften conclusions.
+⚠️ Do NOT assume future fixes.
+⚠️ Judge ONLY the current reality.
+
+This audit is BLOCKING for public release.
+Proceed with maximum rigor and honesty.

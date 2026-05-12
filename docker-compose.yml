@@ -1,0 +1,28 @@
+services:
+  app:
+    container_name: drufckghk3bm_app
+    build: .
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - ./data:/app/data
+  db:
+    image: postgres:16-alpine
+    container_name: drufckghk3bm_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-app}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - drufckghk3bm_db_data:/var/lib/postgresql/data
+networks:
+  default:
+    name: drufckghk3bm_net
+volumes:
+  drufckghk3bm_db_data:

@@ -1,0 +1,107 @@
+أنت فريق Product + Platform Engineering.
+
+المهمة:
+تنفيذ Corporate & Legal Governance Layer لمنصة
+INFERA Engine (Central Intelligence Platform)
+
+الهدف:
+إنشاء بنية احترافية للصفحات المؤسسية والقانونية
+تليق بمنصة مركزية طويلة العمر (10–20 سنة)
+بدون hardcoding وبدون صيانة يدوية مستقبلًا.
+
+────────────────────
+1️⃣ الصفحات المطلوبة (MANDATORY)
+────────────────────
+
+قسم Company:
+- About INFERA
+- Careers
+- Contact
+- Security
+
+قسم Legal:
+- Privacy Policy
+- Terms of Service
+- Cookie Policy
+
+────────────────────
+2️⃣ المتطلبات المعمارية (CRITICAL)
+────────────────────
+
+- جميع الصفحات:
+  ❌ لا تكون Static
+  ❌ لا يكون المحتوى داخل الكود
+
+- المحتوى:
+  ✅ مخزّن في Database / CMS Layer
+  ✅ قابل للتعديل Runtime
+  ✅ يدعم تعدد اللغات (AR / EN)
+
+- Routing:
+  /about
+  /careers
+  /contact
+  /security
+  /legal/privacy
+  /legal/terms
+  /legal/cookies
+
+────────────────────
+3️⃣ Security Page (IMPORTANT)
+────────────────────
+يجب أن تحتوي على:
+- Data Protection overview
+- Encryption standards
+- Access control
+- Incident response policy
+- Responsible disclosure contact
+
+(بدون وعود تنظيمية كاذبة مثل SOC2 إذا لم تكن موجودة)
+
+────────────────────
+4️⃣ Legal Pages (IMPORTANT)
+────────────────────
+- صياغة عامة مرنة (Template-based)
+- لا تشير إلى دولة واحدة
+- لا تفترض كيان قانوني محدد
+- قابلة للتحديث لاحقًا بعد تأسيس الشركة
+
+────────────────────
+5️⃣ Contact Page
+────────────────────
+- Dynamic contact methods
+- Email + Form
+- No hardcoded emails
+- Stored in config table
+
+────────────────────
+6️⃣ Careers Page
+────────────────────
+- Placeholder mode:
+  "No open positions at this time"
+- Structured to support future job postings
+- Job entries from DB (even لو فاضية الآن)
+
+────────────────────
+7️⃣ Footer Integration
+────────────────────
+- Footer component ديناميكي
+- Links تُقرأ من config
+- يدعم إضافة/حذف روابط بدون تعديل كود
+
+────────────────────
+8️⃣ Governance Quality Bar
+────────────────────
+- No marketing fluff
+- Professional tone
+- Enterprise-ready
+- Long-term maintainability
+
+────────────────────
+Deliverables:
+────────────────────
+- Architecture overview
+- DB schema / CMS model
+- Routes implemented
+- Footer integrated
+- Confirmation that no content is hardcoded
